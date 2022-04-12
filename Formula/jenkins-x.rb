@@ -29,6 +29,9 @@ class JenkinsX < Formula
     run_output = shell_output("#{bin}/jx 2>&1")
     assert_match "Jenkins X 3.x command line", run_output
 
+    ns_output = shell_output("#{bin}/jx ns jx 2>&1")
+    assert_match "error: namespaces \"jx\" not found", ns_output
+
     version_output = shell_output("#{bin}/jx version 2>&1")
     assert_match "version:", version_output
     if build.stable?
