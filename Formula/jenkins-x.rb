@@ -2,8 +2,8 @@ class JenkinsX < Formula
   desc "Automated CI+CD for Kubernetes"
   homepage "https://jenkins-x.io/"
   url "https://github.com/jenkins-x/jx.git",
-      tag:      "v3.2.287",
-      revision: "a28624c634bc9bce5d9b7b11dd557397d68e6930"
+      tag:      "v3.2.292",
+      revision: "7ffcc32b2db39d445bf331241942d91e70f4f6d6"
   license "Apache-2.0"
   head "https://github.com/jenkins-x/jx.git", branch: "main"
 
