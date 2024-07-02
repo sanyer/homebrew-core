@@ -300,6 +300,7 @@ cargo-make
 cargo-nextest
 cargo-outdated
 cargo-release
+cargo-udeps
 cargo-watch
 cargo-zigbuild
 cariddi
@@ -688,6 +689,7 @@ editorconfig-checker
 efl
 efm-langserver
 eg-examples
+egctl
 eget
 ehco
 eigenpy
@@ -956,6 +958,7 @@ gmic
 gmime
 gmsh
 gnmic
+gnu-apl
 gnu-getopt
 gnu-units
 gnumeric
@@ -1107,6 +1110,7 @@ htmltest
 htpdate
 htslib
 httm
+httpd
 httping
 httpx
 httpyac
@@ -1115,6 +1119,7 @@ huggingface-cli
 hugo
 hut
 hwatch
+hwloc
 hy
 hyperfine
 hypre
@@ -1147,6 +1152,7 @@ influxdb@1
 inform6
 inframap
 iniparser
+inko
 inlyne
 inspircd
 instaloader
@@ -1260,6 +1266,7 @@ kor
 kotlin
 kpcli
 krakend
+krb5
 krew
 ksops
 ktfmt
@@ -1320,6 +1327,7 @@ lego
 leiningen
 leptonica
 lerna
+less
 lesspipe
 lexbor
 lexicon
@@ -1509,6 +1517,7 @@ mackup
 mactop
 mafft
 mage
+magic_enum
 magic-wormhole
 mailcatcher
 mailpit
@@ -1552,6 +1561,7 @@ mdbook
 mdless
 mdsh
 mdzk
+mediaconch
 mediamtx
 mednafen
 meilisearch
@@ -1648,6 +1658,7 @@ mvnvm
 mvt
 mx
 mycli
+mycorrhiza
 mydumper
 mypy
 mysqltuner
@@ -1737,6 +1748,7 @@ oauth2_proxy
 oauth2c
 objfw
 ocaml-findlib
+ocamlbuild
 oci-cli
 ocicl
 ocm
@@ -1835,6 +1847,7 @@ p11-kit
 pacapt
 packetbeat
 packmol
+pacparser
 pan
 pandoc
 pandoc-crossref
@@ -2517,6 +2530,7 @@ uutils-diffutils
 uutils-findutils
 uuu
 uv
+uvg266
 uvicorn
 uwsgi
 v2ray
@@ -2672,6 +2686,7 @@ yorkie
 yosys
 you-get
 youtubedr
+youtubeuploader
 yq
 yt-dlp
 yubico-piv-tool
