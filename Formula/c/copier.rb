@@ -3,20 +3,18 @@ class Copier < Formula
 
   desc "Utility for rendering projects templates"
   homepage "https://copier.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/3e/65/4059cf029a8782706f53871bcd5402873923bf04353014bf27bc8d5fb2d7/copier-9.2.0.tar.gz"
-  sha256 "4ed9012579923955d3fc61d049568907fabe6d9a47e5f871236c6aae0b7472f1"
+  url "https://files.pythonhosted.org/packages/0f/32/56044ea18ea1c6dc9a00714cbaf7c0ff7e5f486adbfefc28f5ca72a14064/copier-9.3.1.tar.gz"
+  sha256 "e8515c082149f771268e8bc7fe400891d96e765797f5dac9fbae191f6427a24c"
   license "MIT"
-  revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_sonoma:   "2215eb80bb1e8178fd66bc7b0365dd6ba66567ab146f5bcf89a348eeacfff332"
-    sha256 cellar: :any,                 arm64_ventura:  "8ed436b7101b98ca27b41da05e6c9a6ba891d336bad6ea2057468c9c22698f4f"
-    sha256 cellar: :any,                 arm64_monterey: "4f1d3489cad8cd26165df16f0b4da8bf4706e0e3f9b5ee70dd05ed5aaf11dc9c"
-    sha256 cellar: :any,                 sonoma:         "c6cde04b5ea57149c0d22b7ac19937f38e84eeff8f227f5f3212c96142701760"
-    sha256 cellar: :any,                 ventura:        "56d87d11f2a7cc14f9eaba32f7cd61b022893b08daf72ce77b6ec607701f01c0"
-    sha256 cellar: :any,                 monterey:       "877176aeba1588233cb5489a1ebce8751cdb05251f7cb4bfcc753e3096d51935"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d64337e626fddd00ca022b2a96b80b2f23747169058c413b234579f879f9ff31"
+    sha256 cellar: :any,                 arm64_sonoma:   "af75a153f3059b813fbedc784966de69a935564259d74a7859bbc9f2262962e4"
+    sha256 cellar: :any,                 arm64_ventura:  "9795abbd5896c3411fcad07b65c3dd31117f5f8bf59c7498d3d4a26b67389591"
+    sha256 cellar: :any,                 arm64_monterey: "e57421144466ae2bf2b68c536287d78ddeb8924ea6be070265855fdc633d4beb"
+    sha256 cellar: :any,                 sonoma:         "934fbfa2a4f04a588d01a3d33ad8f72ae03f66e3c826bfd6d6611166af7068d7"
+    sha256 cellar: :any,                 ventura:        "2a715b3388be618a284ae1ba7991dabd4c90843d5ef76be197f0bf20109c1352"
+    sha256 cellar: :any,                 monterey:       "f267f161591ae7266e027617bfd9f95c3423698f5824640037007a32d8ece0c3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e077bfc73214b1cddc4295885fae087c51f5915d4f9800e1a3ad1c1afaeae375"
   end
 
   depends_on "rust" => :build
@@ -34,8 +32,8 @@ class Copier < Formula
   end
 
   resource "dunamai" do
-    url "https://files.pythonhosted.org/packages/e0/84/e321b67334207eefeda01942cd57c93ed985e2a4b5e1af1cd60458d7d0d0/dunamai-1.21.1.tar.gz"
-    sha256 "d7fea28ad2faf20a6ca5ec121e5c68e55eec6b8ada23d9c387e4e7a574cc559f"
+    url "https://files.pythonhosted.org/packages/c2/71/7cc5ba60aabefebfaa800e18d82388b0eb48f8f0becbfa5838afe7920484/dunamai-1.21.2.tar.gz"
+    sha256 "05827fb5f032f5596bfc944b23f613c147e676de118681f3bb1559533d8a65c4"
   end
 
   resource "funcy" do
@@ -79,13 +77,13 @@ class Copier < Formula
   end
 
   resource "pydantic" do
-    url "https://files.pythonhosted.org/packages/0d/fc/ccd0e8910bc780f1a4e1ab15e97accbb1f214932e796cff3131f9a943967/pydantic-2.7.4.tar.gz"
-    sha256 "0c84efd9548d545f63ac0060c1e4d39bb9b14db8b3c0652338aecc07b5adec52"
+    url "https://files.pythonhosted.org/packages/8c/99/d0a5dca411e0a017762258013ba9905cd6e7baa9a3fd1fe8b6529472902e/pydantic-2.8.2.tar.gz"
+    sha256 "6f62c13d067b0755ad1c21a34bdd06c0c12625a22b0fc09c6b149816604f7c2a"
   end
 
   resource "pydantic-core" do
-    url "https://files.pythonhosted.org/packages/02/d0/622cdfe12fb138d035636f854eb9dc414f7e19340be395799de87c1de6f6/pydantic_core-2.18.4.tar.gz"
-    sha256 "ec3beeada09ff865c344ff3bc2f427f5e6c26401cc6113d77e372c3fdac73864"
+    url "https://files.pythonhosted.org/packages/12/e3/0d5ad91211dba310f7ded335f4dad871172b9cc9ce204f5a56d76ccd6247/pydantic_core-2.20.1.tar.gz"
+    sha256 "26ca695eeee5f9f1aeeb211ffc12f10bcb6f71e2989988fda61dabd65db878d4"
   end
 
   resource "pygments" do

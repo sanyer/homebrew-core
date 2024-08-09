@@ -32,6 +32,8 @@ class Clip < Formula
   depends_on "fribidi"
   depends_on "harfbuzz"
 
+  conflicts_with "geomview", because: "both install `clip` binaries"
+
   fails_with gcc: "5" # for C++17
 
   def install
@@ -43,7 +45,7 @@ class Clip < Formula
 
   test do
     cp_r pkgshare/"test", testpath
-    system "#{bin}/clip", "--export", "chart.svg",
+    system bin/"clip", "--export", "chart.svg",
            "test/examples/charts_basic_areachart.clp"
     assert_predicate testpath/"chart.svg", :exist?
   end

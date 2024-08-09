@@ -1,26 +1,25 @@
-require "language/node"
-
 class ReleaseIt < Formula
   desc "Generic CLI tool to automate versioning and package publishing related tasks"
   homepage "https://github.com/release-it/release-it"
-  url "https://registry.npmjs.org/release-it/-/release-it-17.4.0.tgz"
-  sha256 "84221cfd1fdc097c0be6362f8bfc4b6cd2bb3e387f7105971900a5305f798060"
+  url "https://registry.npmjs.org/release-it/-/release-it-17.6.0.tgz"
+  sha256 "bcdd80d759a96b8dbca3d662b5b33c3615fc82284412b6f23554e248250d1be5"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "b1fcfb1e98e3ebb4c81bbd163541dd2d1c17ba87bf321038e5efb71c9e7c28ff"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b1fcfb1e98e3ebb4c81bbd163541dd2d1c17ba87bf321038e5efb71c9e7c28ff"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b1fcfb1e98e3ebb4c81bbd163541dd2d1c17ba87bf321038e5efb71c9e7c28ff"
-    sha256 cellar: :any_skip_relocation, sonoma:         "3ee7811d7a1788c89a2f5489de91a8afb16f1eacd5677c7b77e4507a6bd60bce"
-    sha256 cellar: :any_skip_relocation, ventura:        "3ee7811d7a1788c89a2f5489de91a8afb16f1eacd5677c7b77e4507a6bd60bce"
-    sha256 cellar: :any_skip_relocation, monterey:       "3ee7811d7a1788c89a2f5489de91a8afb16f1eacd5677c7b77e4507a6bd60bce"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3c65d75c2e0035ee89ebce86f1a5a0aade9b0fe7170415f1ba2a0c134bd90083"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "fc2f4cb596c2505b3d46890c594e7d89f4ea22b2b01fd4a4cab39dc73e2e8c67"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "fc2f4cb596c2505b3d46890c594e7d89f4ea22b2b01fd4a4cab39dc73e2e8c67"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "fc2f4cb596c2505b3d46890c594e7d89f4ea22b2b01fd4a4cab39dc73e2e8c67"
+    sha256 cellar: :any_skip_relocation, sonoma:         "3d79f27c7872c130817d0783eb74385360c98a400cb08f02ec0991209e340b76"
+    sha256 cellar: :any_skip_relocation, ventura:        "3d79f27c7872c130817d0783eb74385360c98a400cb08f02ec0991209e340b76"
+    sha256 cellar: :any_skip_relocation, monterey:       "3d79f27c7872c130817d0783eb74385360c98a400cb08f02ec0991209e340b76"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c450bb27a909106bf9c159317023c102c17cad776c4f947b5a435db1cae5d047"
   end
 
   depends_on "node"
 
   def install
-    system "npm", "install", *Language::Node.std_npm_install_args(libexec)
+    system "npm", "install", *std_npm_args
     bin.install_symlink Dir["#{libexec}/bin/*"]
   end
 

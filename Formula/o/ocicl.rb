@@ -1,18 +1,18 @@
 class Ocicl < Formula
   desc "OCI-based ASDF system distribution and management tool for Common Lisp"
   homepage "https://github.com/ocicl/ocicl"
-  url "https://github.com/ocicl/ocicl/archive/refs/tags/v2.3.7.tar.gz"
-  sha256 "7199674fe545a0a80b1cf7aed9a52b51277beca3583c95478aae24e0c9af74f8"
+  url "https://github.com/ocicl/ocicl/archive/refs/tags/v2.3.9.tar.gz"
+  sha256 "f1066fc58fab4ae2162da22a5795a16deb4cc8bb6b34c0431d96173fae0aeb79"
   license "MIT"
 
   bottle do
-    sha256 arm64_sonoma:   "1ad6a27c4493dbfc357a326d591b0fe7b84db72c949082d63bdb30fc307890f0"
-    sha256 arm64_ventura:  "7fe61e9d93f5328d204ada7fba3e83990770b99e07e38db560c641498c46ba87"
-    sha256 arm64_monterey: "c8d89c4b706e9bf8a505b73c5eb4b7a822fc60c302554b7ce06cdb849677eddd"
-    sha256 sonoma:         "46a7905ff3c8e1566d1327b7abbb184b4c2a49e396330d951538bcc97a5a62a8"
-    sha256 ventura:        "7599b1cf1dadb1f6e0e5f38701b3ddbefca3f9c8a101a667c5f30790e647b7ec"
-    sha256 monterey:       "aab6fb9a731d26d4155b7a8db4c6367706439985191e5a33b1d262f0f925cc86"
-    sha256 x86_64_linux:   "9d55d3760b24297104b7be424e844ea7589640bd731f836eb31afd8e915ff17b"
+    sha256 arm64_sonoma:   "8a7e2c6f2954c8da856bb82db2dd8859cb9bc90a95ffce6539d940f0be3c83f5"
+    sha256 arm64_ventura:  "bb437ad5eeafdc711c82a5e914bde1086c66011163c3efa4acbe8d5efbddefc7"
+    sha256 arm64_monterey: "f5d29c6d75bc63a7a3b1beb7993e5cc009c5ab94cb62629d44cdfd4fcd9d80a0"
+    sha256 sonoma:         "93280afcb33f7a1009801bc82a36317aaf3cd69bfb3a069a843b2261ba0e6b7f"
+    sha256 ventura:        "ce8b2c840e8714c7ed6809e483d5c468578c28ad34ed77ed082f6c1922f8215c"
+    sha256 monterey:       "6d897b8c30ca96136b970d2cfdc8b2850728be4d067ea3c6dc5654de4332bf40"
+    sha256 x86_64_linux:   "79439bab5529092afe152d8c4c331914f63e8b1dd7baab39b4a63d6c49e084cb"
   end
 
   depends_on "oras"
@@ -39,6 +39,7 @@ class Ocicl < Formula
     # Write a shell script to wrap ocicl
     (bin/"ocicl").write <<~EOS
       #!/usr/bin/env -S sbcl --core #{libexec}/ocicl.core --script
+      (uiop:restore-image)
       (ocicl:main)
     EOS
 
@@ -50,7 +51,7 @@ class Ocicl < Formula
   end
 
   test do
-    system "#{bin}/ocicl", "install", "chat"
+    system bin/"ocicl", "install", "chat"
     assert_predicate testpath/"systems.csv", :exist?
 
     version_files = testpath.glob("systems/cl-chat*/_00_OCICL_VERSION")

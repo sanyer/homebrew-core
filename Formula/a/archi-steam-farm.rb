@@ -2,8 +2,8 @@ class ArchiSteamFarm < Formula
   desc "Application for idling Steam cards from multiple accounts simultaneously"
   homepage "https://github.com/JustArchiNET/ArchiSteamFarm"
   url "https://github.com/JustArchiNET/ArchiSteamFarm.git",
-      tag:      "6.0.3.4",
-      revision: "8673ef842036bafcb2384058e43d5e31c0dfd34e"
+      tag:      "6.0.5.2",
+      revision: "03a5853a91358b7e7dccc0c17f87f2b26e4f872b"
   license "Apache-2.0"
   head "https://github.com/JustArchiNET/ArchiSteamFarm.git", branch: "main"
 
@@ -13,13 +13,13 @@ class ArchiSteamFarm < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "1d4e1f46d49265fc769c22cc92d4e98370bbce01504910e8fd8b705841aad8e2"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "6f54f16fea4af0716441f3894ce39b4a7637c376882e0e7dc9a1f00cea92d5e3"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6ee2074cf035013b94922e63b67aadd5b30703e0a616979a1ef8c54478a4a4ae"
-    sha256 cellar: :any_skip_relocation, sonoma:         "dce80a1cfad291a3c15a17428e86f0cf975ba7468b4813ddf3c1028ed1141e7d"
-    sha256 cellar: :any_skip_relocation, ventura:        "8ffec1f0c694cc157fa8c3dc19bbdf0d42ece93f5a0a9ebc0d89d4b281ea82aa"
-    sha256 cellar: :any_skip_relocation, monterey:       "ac3060e74733136b0608065ed2fb0929dbebc2c4bac1095556c317fc96b6d219"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d15fc12e0a68558e72db2ce83b589600ff46c334d516818cf8edbc029deb0dda"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "6a0864824db6989bb0da80c239aa844c890688b8e119ae5e663493dccca7bc43"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "4adae81a2c25e9c3988013a610bb27d44b270814ad43c8906f16103fd5eb8b59"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "3852db6cc542fe5b17dd81567d8672675a285b27af1f003c9d52fcc10979ec26"
+    sha256 cellar: :any_skip_relocation, sonoma:         "caf59bf9be59b829bd559615e2c369438e09459a144d57f59c8d1e03f46ba88a"
+    sha256 cellar: :any_skip_relocation, ventura:        "5ff652ec3525a2d224afd3168b3ffd379b80824caca1f1820e5af7ff4c369805"
+    sha256 cellar: :any_skip_relocation, monterey:       "ea363e87d3d0f7f902da4a389b86fe2e21f8cd3b36903904a93c843d2dbeb4ad"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "89360c4b7ec016776e2e8e6ef25c72ca037f1e16167f464551d6750aeb7e3d3b"
   end
 
   depends_on "dotnet"
@@ -36,7 +36,7 @@ class ArchiSteamFarm < Formula
     EOS
 
     etc.install libexec/"config" => "asf"
-    rm_rf libexec/"config"
+    rm_r(libexec/"config")
     libexec.install_symlink etc/"asf" => "config"
   end
 

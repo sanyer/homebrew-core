@@ -2,20 +2,20 @@ class Odin < Formula
   desc "Programming language with focus on simplicity, performance and modern systems"
   homepage "https://odin-lang.org/"
   url "https://github.com/odin-lang/Odin.git",
-      tag:      "dev-2024-06",
-      revision: "02f11dfdedcb10f3f45983692898e81b8f315030"
-  version "2024-06"
+      tag:      "dev-2024-08",
+      revision: "1a16585b10044255097e0abaa73aa4f0a422cbd1"
+  version "2024-08"
   license "BSD-3-Clause"
   head "https://github.com/odin-lang/Odin.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "5788ed59051112dd0afc77e061b6a5e08de86358f98c5ab42c41873ef045f1d5"
-    sha256 cellar: :any,                 arm64_ventura:  "13d270418ed64df55556f6dbb039e921bed168146d46f88c56bb939cd95e209e"
-    sha256 cellar: :any,                 arm64_monterey: "10f9bce954d6ceb40d1962286705cc3e4ac313d77b7bb515c8e19f90ffd92a9d"
-    sha256 cellar: :any,                 sonoma:         "e667e49c9995fc5a6ef94654675b2d2b4e60ad8a48d392f27e096db753f20f9d"
-    sha256 cellar: :any,                 ventura:        "95c886670951ab8222cf34a7e4ac488026e7748528660b16de8087f522bb2a45"
-    sha256 cellar: :any,                 monterey:       "f2caf205f0f0003e27a9811f6c962dfd917820b604c6a392d022cca7f65c3088"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "90556c57b033754c3f7b0951140a38850010267e7782585eba1ac72c13f1a1b9"
+    sha256 cellar: :any,                 arm64_sonoma:   "9c4bdd572668c9f55a76f9956d6643695862347e29bebca9e73a96ca8c7f0864"
+    sha256 cellar: :any,                 arm64_ventura:  "97e4e94646429fdb73c2cbcde033b3f7a9ff36812b49d1ca16d5bb1e9519de19"
+    sha256 cellar: :any,                 arm64_monterey: "295781e8c2a00667d90d398f9557cb34b8cdbf6c76c503885ee44a29c4ca949d"
+    sha256 cellar: :any,                 sonoma:         "71a0e2e49fd9f0d25c8cbf6d34c7d3aa360c75cc86bf56c80b2687303a2bf83e"
+    sha256 cellar: :any,                 ventura:        "5799cab2b340caddc720ca99c99d3f5798a736dc1cd757e84bf5ca347b17af1e"
+    sha256 cellar: :any,                 monterey:       "3cbeff8fc1a0b581dec9f26bf5152d34baedfe58d3c8a90968a7e04e3c7e62e7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e67e3d2c82e9f76636f43567a989411dc8a0b7301ee46c72dbe1fa51d9e75657"
   end
 
   depends_on "glfw"
@@ -111,7 +111,7 @@ class Odin < Formula
         fmt.println("Hellope!");
       }
     EOS
-    system "#{bin}/odin", "build", "hellope.odin", "-file"
+    system bin/"odin", "build", "hellope.odin", "-file"
     assert_equal "Hellope!\n", shell_output("./hellope")
 
     (testpath/"miniaudio.odin").write <<~EOS
@@ -126,7 +126,7 @@ class Odin < Formula
         fmt.println(ver)
       }
     EOS
-    system "#{bin}/odin", "run", "miniaudio.odin", "-file"
+    system bin/"odin", "run", "miniaudio.odin", "-file"
 
     if OS.mac?
       (testpath/"raylib.odin").write <<~EOS
@@ -143,8 +143,8 @@ class Odin < Formula
           assert(42 <= num && num <= 1337)
         }
       EOS
-      system "#{bin}/odin", "run", "raylib.odin", "-file"
-      system "#{bin}/odin", "run", "raylib.odin", "-file",
+      system bin/"odin", "run", "raylib.odin", "-file"
+      system bin/"odin", "run", "raylib.odin", "-file",
         "-define:RAYLIB_SHARED=true", "-define:RAYGUI_SHARED=true"
 
       (testpath/"glfw.odin").write <<~EOS
@@ -157,7 +157,7 @@ class Odin < Formula
           fmt.println(glfw.GetVersion())
         }
       EOS
-      system "#{bin}/odin", "run", "glfw.odin", "-file"
+      system bin/"odin", "run", "glfw.odin", "-file"
     end
   end
 end

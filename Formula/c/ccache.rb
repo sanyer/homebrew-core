@@ -1,37 +1,19 @@
 class Ccache < Formula
   desc "Object-file caching compiler wrapper"
   homepage "https://ccache.dev/"
+  url "https://github.com/ccache/ccache/releases/download/v4.10.2/ccache-4.10.2.tar.xz"
+  sha256 "c0b85ddfc1a3e77b105ec9ada2d24aad617fa0b447c6a94d55890972810f0f5a"
   license "GPL-3.0-or-later"
   head "https://github.com/ccache/ccache.git", branch: "master"
 
-  stable do
-    # TODO: Remove `stable` block at next release (after removing patches below)
-    url "https://github.com/ccache/ccache/releases/download/v4.10/ccache-4.10.tar.xz"
-    sha256 "83630b5e922b998ab2538823e0cad962c0f956fad1fcf443dd5288269a069660"
-
-    # Fix detection of system blake3
-    # https://github.com/ccache/ccache/pull/1464
-    patch do
-      url "https://github.com/ccache/ccache/commit/d159306db8398da233df6481ac3fd83460ef0f0b.patch?full_index=1"
-      sha256 "1db1a39677b94cd365b98d8df1fcd0b116866175d4a55730af9bfa1ab443e4be"
-    end
-
-    # Fix blake3 include. Same PR as above.
-    patch do
-      url "https://github.com/ccache/ccache/commit/fa4046966e71011587364b0241255130b62858fb.patch?full_index=1"
-      sha256 "c0d5d61e3ef594c0587e249798e95c9d508f41452fd649685b8f6a00e667be80"
-    end
-  end
-
   bottle do
-    rebuild 2
-    sha256 cellar: :any,                 arm64_sonoma:   "4e72285f6d94410d3baf40dc04052bb546dc5ab7d7bc01d7ac7ca70e64b24020"
-    sha256 cellar: :any,                 arm64_ventura:  "8043e413c18d0c598653b309275cd8c3fb974d4020f95b1ea85941f0ce9262c4"
-    sha256 cellar: :any,                 arm64_monterey: "5ca62fe4461f482f453a589e9bb80c8fdd2c3eadd94fc0bef52b104fc25d13d0"
-    sha256 cellar: :any,                 sonoma:         "6df01b817d2bfed4194adc1aecb269403dac1c628db61e092137afbbaf97b359"
-    sha256 cellar: :any,                 ventura:        "cfba61f8bc211cdd291d71ebce4756779df320f42c0dc5dd5b22388d10f95dbc"
-    sha256 cellar: :any,                 monterey:       "76ca517d84c07890373dd7ecc00524de556cde1eaf7f56da1575b8a2b88e1297"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9d82ff8a8f096ef8506b29def639240dff809d12728e6be088698022f93bbbda"
+    sha256 cellar: :any,                 arm64_sonoma:   "f10682ca8b218f0f18be997b0ab0e05e53c0cb5b63de25c764a5a4c15f2b2792"
+    sha256 cellar: :any,                 arm64_ventura:  "f8b74c0d8e7785e57f18abde772da5f5917d7edbbc59fa2fa9f4401d2c12dba6"
+    sha256 cellar: :any,                 arm64_monterey: "69c2caf5bf1121b73b449d6b27c45adf5e9846f254ce8dd8c2655df96ab1545e"
+    sha256 cellar: :any,                 sonoma:         "fc2d7b310367e78cba84f3c726f0af9abf71228f4b850afa165ae9dfe7c5b587"
+    sha256 cellar: :any,                 ventura:        "fc8234159670790a58c6183c7f3cb9368721ed511357adcf1cae0935862f135a"
+    sha256 cellar: :any,                 monterey:       "a80721e88752c9e445d22b8357f04f60a6faf7dfb4357ff873d95acf64616826"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e23086074e636d6819e2976da2674124c630718c51c5359cda2b7326d5b1fb5f"
   end
 
   depends_on "asciidoctor" => :build
@@ -108,6 +90,6 @@ class Ccache < Formula
   test do
     ENV.prepend_path "PATH", opt_libexec
     assert_equal "#{opt_libexec}/gcc", shell_output("which gcc").chomp
-    system "#{bin}/ccache", "-s"
+    system bin/"ccache", "-s"
   end
 end

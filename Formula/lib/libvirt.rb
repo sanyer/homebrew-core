@@ -1,8 +1,8 @@
 class Libvirt < Formula
   desc "C virtualization API"
   homepage "https://libvirt.org/"
-  url "https://download.libvirt.org/libvirt-10.4.0.tar.xz"
-  sha256 "d1308be98da418ce463f0d9e4ac28a94b1a859364db3bb078d6e153dc587efe4"
+  url "https://download.libvirt.org/libvirt-10.6.0.tar.xz"
+  sha256 "a495b2a26faca841ac0073c7dd7f60857ca81adac9047dac5f698fd75f1342cd"
   license all_of: ["LGPL-2.1-or-later", "GPL-2.0-or-later"]
   head "https://gitlab.com/libvirt/libvirt.git", branch: "master"
 
@@ -12,13 +12,13 @@ class Libvirt < Formula
   end
 
   bottle do
-    sha256 arm64_sonoma:   "ba6027bae4d3e7d72be3ef531af38511f333c244ef759ce24e42e5ea17d9f39e"
-    sha256 arm64_ventura:  "534ee54280f0fbcc62aca01ca391f0ffff9dea4929a3956cb0e876ed067f1441"
-    sha256 arm64_monterey: "3bdf47c395b23696ad6a2f10a1fe05f73af65d89e7340e25b567f0a847928e06"
-    sha256 sonoma:         "40eeefdb1dd35fb7fa82130cc0b82b167b11592e1db151aa5de6a706462948a9"
-    sha256 ventura:        "a3f23703a228eaa4827c8f37fc49b1c298ace4fb5ccdcc018a1fdb32bfafbf89"
-    sha256 monterey:       "9bba62dfbeb13f893696bf4d769114c3acf2684ae6f69f15c533c2ba5a8b02b7"
-    sha256 x86_64_linux:   "199e7cd75a0c8521ffa7a28c390a62f5514bd36e9e368524f6f2f82ef7245fc5"
+    sha256 arm64_sonoma:   "aa07915650efc8bf4d78481ca4f585ba7c02789b1010afd580c029a30294677d"
+    sha256 arm64_ventura:  "934dee0d13f6bf5943e935a417d321b1ec749db24e23aabdd679602dbde43894"
+    sha256 arm64_monterey: "a97f05911e9d91d79039a4c90ecf9ad946496c68e335bd26e21b989438c44780"
+    sha256 sonoma:         "0a44ee27ac49b2f9f3f1f7458dd3c4a42c80db11b5d7fe948b3e6981bc0b6a40"
+    sha256 ventura:        "632a041625a6f67def2ba85aeca35226bc45a8e3f84be63bd84be576b7fa85c0"
+    sha256 monterey:       "cff5dc104a04f92310cf80a1d98b5320a0df727f9922fda98859649f9a6ded92"
+    sha256 x86_64_linux:   "c497746b634936b079b7c408ef6900b99fe72be4bdd1a747eb47d5c218793357"
   end
 
   depends_on "docutils" => :build
@@ -26,6 +26,7 @@ class Libvirt < Formula
   depends_on "ninja" => :build
   depends_on "perl" => :build
   depends_on "pkg-config" => :build
+
   depends_on "gettext"
   depends_on "glib"
   depends_on "gnu-sed"
@@ -38,6 +39,7 @@ class Libvirt < Formula
   depends_on "yajl"
 
   uses_from_macos "curl"
+  uses_from_macos "libxml2"
   uses_from_macos "libxslt"
 
   on_macos do
@@ -47,6 +49,7 @@ class Libvirt < Formula
   on_linux do
     depends_on "acl"
     depends_on "libtirpc"
+    depends_on "util-linux"
   end
 
   fails_with gcc: "5"
@@ -74,12 +77,6 @@ class Libvirt < Formula
   end
 
   test do
-    if build.head?
-      output = shell_output("#{bin}/virsh -V")
-      assert_match "Compiled with support for:", output
-    else
-      output = shell_output("#{bin}/virsh -v")
-      assert_match version.to_s, output
-    end
+    assert_match version.to_s, shell_output("#{bin}/virsh -v")
   end
 end

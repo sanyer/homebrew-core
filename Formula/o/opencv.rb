@@ -1,10 +1,11 @@
 class Opencv < Formula
   desc "Open source computer vision library"
   homepage "https://opencv.org/"
-  url "https://github.com/opencv/opencv/archive/refs/tags/4.9.0.tar.gz"
-  sha256 "ddf76f9dffd322c7c3cb1f721d0887f62d747b82059342213138dc190f28bc6c"
+  url "https://github.com/opencv/opencv/archive/refs/tags/4.10.0.tar.gz"
+  sha256 "b2171af5be6b26f7a06b1229948bbb2bdaa74fcf5cd097e0af6378fce50a6eb9"
   license "Apache-2.0"
-  revision 11
+  revision 2
+  head "https://github.com/opencv/opencv.git", branch: "4.x"
 
   livecheck do
     url :stable
@@ -12,13 +13,13 @@ class Opencv < Formula
   end
 
   bottle do
-    sha256 arm64_sonoma:   "647205c9e0cd4ca40e0833814e7baf8db9641390a64f89a945b9e67324ff0124"
-    sha256 arm64_ventura:  "7d2fcea528c7d0b200211f8f309cb56ad57db2a01fdd1f9c9aba867e9ba2f89f"
-    sha256 arm64_monterey: "ce1f1ad9d7946afbc74eb627984a1798f394c01119a669af2ff7a8af7ce45267"
-    sha256 sonoma:         "982efcf567995cff836ade3260c5f71252d1105934fc843b887e3f8aa2fd890f"
-    sha256 ventura:        "5f6b0d47d59a47935a9beac859ddece192bbeeeb32c98859e2673e4be08e9283"
-    sha256 monterey:       "b8ddbd1366bbdc17a5af3b251bc4e0b7d526cdcb631688f608e5eccff222b665"
-    sha256 x86_64_linux:   "1ea9aa95577a3fea6d82d3b9093de379c263d2ae5b824be91f6549e3992142ab"
+    sha256 arm64_sonoma:   "087aa72ff67a7df062a9463e45f6acf646982c38ee36443b40a806f5cb1d653d"
+    sha256 arm64_ventura:  "baf32606d984f076f3e30ae3f0b200e485929e7bf49ccf256383af874084af68"
+    sha256 arm64_monterey: "4242b2999d6c39680656dfb1cad8ad91c98d96c0e5b60f0805547a5f7bef6a68"
+    sha256 sonoma:         "36fac819be67e8ea339c268818e6637e7645a5bb6aea30210435959e1be3a249"
+    sha256 ventura:        "c964dfd611d940d044247c9bb482b455f46481e11de40e38212319ebd4d29fb4"
+    sha256 monterey:       "02a9f4b1b83d67427cb02beae50b5a756ddba1658baf384fe8fd8ecc65ec5a2d"
+    sha256 x86_64_linux:   "14c66ade7d9c213182934fc9c21dea7bb3517f2a25b14d1b5965eea60c8a10fe"
   end
 
   depends_on "cmake" => :build
@@ -66,30 +67,12 @@ class Opencv < Formula
   fails_with gcc: "5" # ffmpeg is compiled with GCC
 
   resource "contrib" do
-    url "https://github.com/opencv/opencv_contrib/archive/refs/tags/4.9.0.tar.gz"
-    sha256 "8952c45a73b75676c522dd574229f563e43c271ae1d5bbbd26f8e2b6bc1a4dae"
-
-    # TODO: remove with next OpenCV release. Fix https://github.com/opencv/opencv_contrib/pull/3624
-    patch do
-      url "https://github.com/opencv/opencv_contrib/commit/46fb893f9a632012990713c4003d7d3cab4f2f25.patch?full_index=1"
-      sha256 "8f89f3db9fd022ffbb30dd1992df6d20603980fadfe090384e12c57731a9e062"
-    end
+    url "https://github.com/opencv/opencv_contrib/archive/refs/tags/4.10.0.tar.gz"
+    sha256 "65597f8fb8dc2b876c1b45b928bbcc5f772ddbaf97539bf1b737623d0604cba1"
   end
 
   def python3
     "python3.12"
-  end
-
-  # Patch for DNN module to work with OpenVINO API 2.0(enabled starting OV 2022.1 release)
-  patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/a10057a843de773896a50e9b18f4559a8bbc4d27/opencv/openvino-api2.0.patch"
-    sha256 "08f918fa762715d0fbc558baee9867be8f059ee3008831dc0a09af63404a9048"
-  end
-
-  # Patch for G-API to work with OpenVINO API 2.0(enabled starting OV 2022.1 release)
-  patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/a10057a843de773896a50e9b18f4559a8bbc4d27/opencv/gapi-openvino-api2.0.patch"
-    sha256 "b67aa8882559858824c5841ba3d0746078273be081540b0d339c0ff58dc9452d"
   end
 
   def install
@@ -103,7 +86,7 @@ class Opencv < Formula
 
     # Remove bundled libraries to make sure formula dependencies are used
     libdirs = %w[ffmpeg libjasper libjpeg libjpeg-turbo libpng libtiff libwebp openexr openjpeg protobuf tbb zlib]
-    libdirs.each { |l| (buildpath/"3rdparty"/l).rmtree }
+    libdirs.each { |l| rm_r(buildpath/"3rdparty"/l) }
 
     args = %W[
       -DCMAKE_CXX_STANDARD=17
@@ -189,6 +172,9 @@ class Opencv < Formula
 
     # Prevent dependents from using fragile Cellar paths
     inreplace lib/"pkgconfig/opencv#{version.major}.pc", prefix, opt_prefix
+
+    # Replace universal binaries with their native slices
+    deuniversalize_machos
   end
 
   test do
