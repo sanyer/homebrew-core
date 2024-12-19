@@ -239,6 +239,7 @@ beautysh
 bed
 bee
 bench
+bender
 benthos
 berglas
 bettercap
@@ -320,6 +321,7 @@ bwidget
 byacc
 byobu
 byteman
+bzip3
 bzt
 c-ares
 c-blosc
@@ -1125,6 +1127,7 @@ gjs
 glances
 glassfish
 glasskube
+glaze
 gleam
 glfw
 glib-networking
@@ -1152,6 +1155,7 @@ gnupg@2.2
 gnuplot
 gnutls
 go
+go-blueprint
 go-camo
 go-critic
 go-feature-flag-relay-proxy
@@ -1243,6 +1247,7 @@ groovysdk
 grpc
 grpc-swift
 grype
+gsan
 gsettings-desktop-schemas
 gsl
 gsmartcontrol
@@ -1427,6 +1432,7 @@ jena
 jenkins
 jenkins-job-builder
 jenkins-lts
+jerryscript
 jet
 jetty
 jetty-runner
@@ -1472,6 +1478,7 @@ juju
 julia
 jupyterlab
 just
+jwt-cli
 jxl-oxide
 jython
 k2tf
@@ -1579,6 +1586,7 @@ langgraph-cli
 languagetool
 lanraragi
 lastpass-cli
+lastz
 laszip
 latex2html
 latexdiff
@@ -1670,6 +1678,7 @@ libheif
 libhubbub
 libical
 libice
+libiconv
 libidn2
 libimagequant
 libimobiledevice-glue
@@ -1924,6 +1933,7 @@ mdbook
 mdcat
 mdless
 mdsh
+mdz
 mdzk
 mediaconch
 mediamtx
@@ -1947,6 +1957,7 @@ metals
 metricbeat
 mfem
 mgba
+mgis
 micro
 micromamba
 micronaut
@@ -2463,6 +2474,7 @@ prqlc
 prr
 prs
 psalm
+pscale
 pspg
 psutils
 psysh
@@ -2590,6 +2602,7 @@ release-it
 remarshal
 remind
 renovate
+replxx
 repo
 reposurgeon
 repren
@@ -2714,6 +2727,7 @@ scummvm-tools
 scw
 sdb
 sdl2
+sdl2_image
 seal
 seam
 seaweedfs
@@ -2937,6 +2951,7 @@ swig
 swtpm
 syft
 symengine
+synchrony
 syncthing
 sysaidmin
 sysdig
@@ -3055,6 +3070,7 @@ tofuenv
 toipe
 tomcat
 tomcat-native
+tomcat@10
 tomcat@9
 tomee-plume
 tomee-plus
@@ -3066,6 +3082,7 @@ topfew
 topgrade
 topiary
 tor
+totp-cli
 tox
 toxcore
 toxiproxy
@@ -3097,6 +3114,7 @@ tt
 ttdl
 ttyd
 ttyplot
+tuisky
 tup
 twine
 txr
