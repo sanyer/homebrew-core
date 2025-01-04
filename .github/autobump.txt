@@ -371,6 +371,7 @@ cargo-instruments
 cargo-llvm-cov
 cargo-llvm-lines
 cargo-make
+cargo-msrv
 cargo-nextest
 cargo-outdated
 cargo-public-api
@@ -1089,6 +1090,7 @@ gexiv2
 gf
 gfold
 ggshield
+gh-ost
 ghcup
 ghex
 ghorg
@@ -1300,6 +1302,7 @@ hapi-fhir-cli
 haproxy
 haproxy@2.8
 harfbuzz
+harper
 haskell-language-server
 haskell-stack
 hasura-cli
@@ -1726,6 +1729,7 @@ libmapper
 libmatio
 libmaxminddb
 libmicrohttpd
+libmikmod
 libmobi
 libmodbus
 libmonome
@@ -1999,6 +2003,7 @@ micropython
 microsocks
 mighttpd2
 mihomo
+mikmod
 mill
 miller
 millet
@@ -2028,6 +2033,7 @@ mkvtoolnix
 mlkit
 mlpack
 mlt
+mlton
 mlx
 mmark
 mmdbctl
@@ -2712,6 +2718,7 @@ ruff
 ruff-lsp
 rune
 runit
+runitor
 rure
 rush
 rush-parallel
@@ -2794,6 +2801,7 @@ sequin
 sequoia-sq
 ser2net
 serialosc
+serie
 serpl
 serverless
 service-weaver
@@ -3019,6 +3027,7 @@ systemc
 systemd
 t-completion
 ta-lib
+tabiew
 tailscale
 tailspin
 tailwindcss
@@ -3109,6 +3118,7 @@ tile38
 timg
 tin
 tintin
+tiny
 tinymist
 tinyproxy
 tio
@@ -3219,6 +3229,7 @@ usbredir
 usbutils
 userspace-rcu
 utf8cpp
+utf8proc
 util-linux
 util-macros
 uutils-coreutils
@@ -3295,6 +3306,7 @@ vtclock
 vte3
 vtk
 vue-cli
+vue-language-server
 vulkan-extensionlayer
 vulkan-validationlayers
 vulkan-volk
@@ -3375,6 +3387,7 @@ xa
 xapian
 xauth
 xbyak
+xc
 xcb-util-cursor
 xcbeautify
 xcdiff
@@ -3395,6 +3408,7 @@ xlsxio
 xmake
 xmlrpc-c
 xmount
+xmq
 xmrig
 xnvme
 xonsh

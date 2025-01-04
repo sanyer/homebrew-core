@@ -1,18 +1,18 @@
 class Aliae < Formula
   desc "Cross shell and platform alias management"
   homepage "https://aliae.dev"
-  url "https://github.com/jandedobbeleer/aliae/archive/refs/tags/v0.26.0.tar.gz"
-  sha256 "71d6b0327c3c3717814e37daea55f80c1c04d31c53e799505ed13d75a7f9b557"
+  url "https://github.com/jandedobbeleer/aliae/archive/refs/tags/v0.26.3.tar.gz"
+  sha256 "adc8ef4dcdb8a0604c114453a965877158e8d4bb91ad41acb10f58fc1f23caf5"
   license "MIT"
   head "https://github.com/jandedobbeleer/aliae.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "0759bb4a19ec6b130896d247b235df5486a43d4c7a8af0a81cf269813705a0b5"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e9ea43373c96463b9d5262b23eb1706388d424bb53e7f2ff203fedd8acd9ba1a"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "5030b4d873fb145eabb3d4ce552b253016fa17b7b143187ba89c92dca11ba7ed"
-    sha256 cellar: :any_skip_relocation, sonoma:        "a9f7280bf8c5dfbfcf1b547a1f0a6d6d06271eb1365edd3e03ca703d7825cb6a"
-    sha256 cellar: :any_skip_relocation, ventura:       "8bd45af49ac63184c53f335cf9cd2229323a009dbfec8650bfebef7eb73082e4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2ff633dce774c5f5e571b6a87f14a8e0c6afbc11990a9b4a5076f229bc5877db"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "eab29877e9053b99c52251dd4e35fe43a9979f9d87c700618e9291b573b3db28"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "97566def171cc266dea835f09fef0183e057e5ee30ba02589962e0767a422a94"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "d96204209ca150ee96bab75ce270dabbd14f97ba80e6f6cc3707b15be75d7862"
+    sha256 cellar: :any_skip_relocation, sonoma:        "8cb7d17299164c79b339f0d1902ab300ef5d9eecbaed2dbb427cf92718c4133f"
+    sha256 cellar: :any_skip_relocation, ventura:       "15d6e698589f35f3e99a69f2c800056caf03f4293683686a3b6ef6b1c3287aca"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9e883ce7e9f53f6a0c2e2f1aff9ccdd7d0731ca81e09788e8f29e537e9313faf"
   end
 
   depends_on "go" => :build
