@@ -2759,6 +2759,7 @@ rekor-cli
 release-it
 remarshal
 remind
+render
 renovate
 replxx
 repo
@@ -3206,6 +3207,7 @@ termbg
 terminator
 termscp
 terracognita
+terraform-cleaner
 terraform-inventory
 terraform-local
 terraform-ls
@@ -3228,9 +3230,11 @@ texlab
 texmath
 texttest
 tf-profile
+tf-summarize
 tfautomv
 tfel
 tfmigrate
+tfprovidercheck
 tfproviderlint
 tfschema
 tfsec
