@@ -132,6 +132,7 @@ ast-grep
 astgen
 astro
 astrometry-net
+astroterm
 astyle
 asuka
 asymptote
@@ -1929,6 +1930,7 @@ linode-cli
 linux-headers@5.15
 linux-pam
 liqoctl
+liquid-dsp
 liquidprompt
 lit
 litecli
@@ -2194,6 +2196,7 @@ nanopb
 nasm
 nats-server
 nats-streaming-server
+naturaldocs
 navi
 navidrome
 nbdime
@@ -2612,6 +2615,7 @@ proselint
 proteinortho
 proto
 protobuf
+protobuf-c
 protoc-gen-go
 protoc-gen-go-grpc
 protoc-gen-grpc-java
@@ -2759,6 +2763,7 @@ rekor-cli
 release-it
 remarshal
 remind
+render
 renovate
 replxx
 repo
@@ -3033,6 +3038,7 @@ spacer
 spack
 spades
 spatialindex
+spdlog
 spectra
 spectral-cli
 spglib
@@ -3206,6 +3212,7 @@ termbg
 terminator
 termscp
 terracognita
+terraform-cleaner
 terraform-inventory
 terraform-local
 terraform-ls
@@ -3228,9 +3235,11 @@ texlab
 texmath
 texttest
 tf-profile
+tf-summarize
 tfautomv
 tfel
 tfmigrate
+tfprovidercheck
 tfproviderlint
 tfschema
 tfsec
@@ -3468,6 +3477,7 @@ wasmedge
 wasmer
 wasmtime
 watch
+watcher
 watchexec
 wavpack
 wayland
@@ -3479,6 +3489,7 @@ weasyprint
 weaviate
 weaviate-cli
 web-ext
+webarchiver
 webdis
 webhook
 webkitgtk
