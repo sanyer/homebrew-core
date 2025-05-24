@@ -209,6 +209,7 @@ awsdac
 awslogs
 axel
 azcopy
+azion
 azqr
 azure-core-cpp
 azure-storage-common-cpp
@@ -319,6 +320,7 @@ blueutil
 bluez
 bmake
 bnd
+boa
 bob
 bochs
 bold
@@ -432,6 +434,7 @@ cargo-outdated
 cargo-public-api
 cargo-release
 cargo-run-bin
+cargo-shear
 cargo-shuttle
 cargo-sort
 cargo-spellcheck
@@ -509,6 +512,7 @@ chdig
 cheat
 check-jsonschema
 checkbashisms
+checkdmarc
 checkmake
 checkov
 checkstyle
@@ -1051,6 +1055,7 @@ fatal
 faudio
 fauna-shell
 faust
+fava
 favirecon
 fb303
 fblog
@@ -1386,6 +1391,7 @@ goreman
 goresym
 gorilla-cli
 gosec
+goshs
 gossip
 gostatic
 gosu
@@ -1426,6 +1432,7 @@ graphql-inspector
 graphqurl
 graphqxl
 graphviz
+graphviz2drawio
 grayskull
 greenmask
 grep
@@ -1701,6 +1708,7 @@ joker
 jolie
 joplin-cli
 jose
+joshuto
 jove
 jp2a
 jpeg-turbo
@@ -1824,6 +1832,7 @@ kubecfg
 kubecm
 kubecolor
 kubeconform
+kubectl-ai
 kubectl-cnpg
 kubectl-rook-ceph
 kubefirst
@@ -1874,6 +1883,7 @@ latexindent
 latexml
 latino
 lazydocker
+lazygit
 lazyjj
 lazyjournal
 lazysql
@@ -1936,6 +1946,7 @@ libdap
 libdeflate
 libdex
 libdicom
+libdiscid
 libdivide
 libdmtx
 libdnet
@@ -2063,6 +2074,7 @@ libshumate
 libsidplayfp
 libsigsegv
 libsixel
+libslax
 libslirp
 libsm
 libsndfile
@@ -2107,6 +2119,7 @@ libvirt
 libvirt-python
 libvisio
 libvncserver
+libvoikko
 libvpx
 libwbxml
 libwebsockets
@@ -2320,6 +2333,7 @@ meson
 meta-package-manager
 metabase
 metals
+metaproxy
 metricbeat
 mfem
 mgba
@@ -2723,6 +2737,7 @@ ott
 ouch
 ov
 overarch
+overdrive
 overmind
 overtls
 ox
@@ -3102,6 +3117,7 @@ remarshal
 remind
 render
 renovate
+reorder-python-imports
 replxx
 repo
 repomix
@@ -3439,6 +3455,7 @@ sqlcipher
 sqlcmd
 sqlfluff
 sqlite-utils
+sqlitecpp
 sqlmap
 sqlpage
 sqlparse
@@ -3955,6 +3972,7 @@ wimlib
 winetricks
 wiredtiger
 wireguard-go
+wireguard-tools
 wiremock-standalone
 wireshark
 witness

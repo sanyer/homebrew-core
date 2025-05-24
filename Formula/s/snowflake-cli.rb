@@ -3,18 +3,18 @@ class SnowflakeCli < Formula
 
   desc "CLI for snowflake"
   homepage "https://docs.snowflake.com/developer-guide/snowflake-cli/index"
-  url "https://files.pythonhosted.org/packages/44/5b/c2a6d51bbede5ad99b8ee0ff33190e4f9d22e62665dfaf861b3971a9ffe7/snowflake_cli-3.8.0.tar.gz"
-  sha256 "b16875455cb124d4e74804dcd0111210f13cbcbc21237f26881781b862fb341b"
+  url "https://files.pythonhosted.org/packages/17/6e/0af1ba22be9ac42ff9c4027610927bb49cc189c14dec7d6b2fb1aca98186/snowflake_cli-3.8.3.tar.gz"
+  sha256 "12b94ba3a5af23d5cd5f53f7685017a5f4b76b2c71d9f056964393b0fc72b6fd"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "f72b4ff571e4d153c25e3651d77b277d3f90d3268020ed2474fd8d3e91ee051a"
-    sha256 cellar: :any,                 arm64_sonoma:  "c34c67f053dbd3cdf9bf8221fb3bf283bda05e95b6b411c70645ee9a5a59d5be"
-    sha256 cellar: :any,                 arm64_ventura: "47ea0bbaf805c25991e742cdb583045b6c4c5c1034f5aa9a69e6766f58156728"
-    sha256 cellar: :any,                 sonoma:        "52c12ccf4eb7d83abfcac461ed89b3bcd77e350400333c7b0af4c843eef3a112"
-    sha256 cellar: :any,                 ventura:       "d7c6601412298b66e68cd913d47f2b2faf35e9adff5161ed9bd2ab084c7fcb7f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "c852cd078daf5fd3f9a722fbed86c8f7654f94b36f06affe7a74a74db04a22f6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2f296279355db9ed58669599bc8ee37a35e506e0032bbb17498a2421ed7f27d1"
+    sha256 cellar: :any,                 arm64_sequoia: "0a96b29feea3474f12863dc13fbcc039b122939b1ee7719fa78d99e0cfc4e23d"
+    sha256 cellar: :any,                 arm64_sonoma:  "93abae0d59a33109d1468621ffc1a20b54deb86a3e932d516d5ea48c19f6970d"
+    sha256 cellar: :any,                 arm64_ventura: "d7fc5d7271ddb4831300dd5b0352a3032df048f4a3bfe06f949d98e52fb78d37"
+    sha256 cellar: :any,                 sonoma:        "d0303079832379fc32a447b41a1800289392a6cb0deea2574cf34d564a62ddbf"
+    sha256 cellar: :any,                 ventura:       "218dad4c80135f9b39ef9bc76bc5e9f8445227d0bdce2e2cf53f22c46faa406d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "c000cc03f63d399c3c8148dca7ebcf18b04b7150bd43f9cc2677fe07dd764b59"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "04bea8126604c9058a3e7074f4c2a8c03cbc68315b53f5afe0d15c266908d9ef"
   end
 
   depends_on "rust" => :build # for pydantic-core
@@ -36,13 +36,13 @@ class SnowflakeCli < Formula
   end
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/a5/dd/68ea8ab6dfbed46b75fcfe0bbd5ae19e4d3ef094b749ff8d944398e90f2d/boto3-1.38.17.tar.gz"
-    sha256 "6058feef976ece2878ad3555f39933e63d20d02e2bbd40610ab2926d4555710a"
+    url "https://files.pythonhosted.org/packages/c5/02/b8e52defe7322998a79cb8e09d8f8a00b9d7452a0a516072f67df89f57f1/boto3-1.38.21.tar.gz"
+    sha256 "417d0328fd3394ffb1c1f400d4277d45b0b86f48d2f088a02306474969344a47"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/33/73/8b831403be00dbea152d4827929a5772f58e0413dd3e6b6d4b3592d88d39/botocore-1.38.17.tar.gz"
-    sha256 "f2db4c4bdcfbc41d78bfe73b9affe7d217c7840f8ce120cff815536969418b18"
+    url "https://files.pythonhosted.org/packages/05/4a/89f2beab6757c900b15aa301227c9447feff7d327ff0595a2b74406a388c/botocore-1.38.21.tar.gz"
+    sha256 "08d5e9c00e5cc9e0ae0e60570846011789dc7f1d4ea094b3f3e3f3ae1ff2063a"
   end
 
   resource "charset-normalizer" do
@@ -171,8 +171,8 @@ class SnowflakeCli < Formula
   end
 
   resource "pyopenssl" do
-    url "https://files.pythonhosted.org/packages/9f/26/e25b4a374b4639e0c235527bbe31c0524f26eda701d79456a7e1877f4cc5/pyopenssl-25.0.0.tar.gz"
-    sha256 "cd2cef799efa3936bb08e8ccb9433a575722b9dd986023f1cabc4ae64e9dac16"
+    url "https://files.pythonhosted.org/packages/04/8c/cd89ad05804f8e3c17dea8f178c3f40eeab5694c30e0c9f5bcd49f576fc3/pyopenssl-25.1.0.tar.gz"
+    sha256 "8d031884482e0c67ee92bf9a4d8cceb08d92aba7136432ffb0703c5280fc205b"
   end
 
   resource "python-dateutil" do
@@ -235,14 +235,14 @@ class SnowflakeCli < Formula
     sha256 "26ea65a03958fa0c8a1c7e8c7a58fdc77221b8910f6be2131affade476898ad5"
   end
 
-  resource "snowflake-core" do
-    url "https://files.pythonhosted.org/packages/ff/80/90c836a5d1dab83dea632d4286ab60e9f07aadef3e887785f33f7d6a2ff1/snowflake_core-1.5.0.tar.gz"
-    sha256 "c042c69c0cc95485898379b6c3ca4a236664908a56f4f688a415e7683e661a78"
-  end
-
   resource "snowflake-connector-python" do
     url "https://files.pythonhosted.org/packages/99/ff/7c1b2cbb5a43b21abebfa58c83926266e9f5ea05123e795753da6ce84f96/snowflake_connector_python-3.15.0.tar.gz"
     sha256 "1ef52e2fb3ecc295139737d3d759f85d962ef7278c6990c3bd9c17fcb82508d6"
+  end
+
+  resource "snowflake-core" do
+    url "https://files.pythonhosted.org/packages/5d/b8/338479e7e16c4ec70411e076ffc08b209ad78df0b24abd34cc13c97e1b10/snowflake_core-1.4.0.tar.gz"
+    sha256 "dc1ccedece41b52fdcb85f89c0ab801bc52c71ae68a3bf5f7e9df74d750fe44f"
   end
 
   resource "sortedcontainers" do
@@ -261,8 +261,8 @@ class SnowflakeCli < Formula
   end
 
   resource "types-setuptools" do
-    url "https://files.pythonhosted.org/packages/38/b1/a52ff157d80464beabb2f0e86881eca28fbc2d519f67ad2f274ef2fe9724/types_setuptools-80.7.0.20250516.tar.gz"
-    sha256 "57274b58e05434de42088a86074c9e630e5786f759cf9cc1e3015e886297ca21"
+    url "https://files.pythonhosted.org/packages/e6/2e/947172e12515ff815979b78377b47c3c434df7097e02241f4c80b960d1a4/types_setuptools-80.8.0.20250521.tar.gz"
+    sha256 "7360b33b1ed3cda6e5a1f379701a61ec9dbee6e59e8bda072b88226157d8da80"
   end
 
   resource "typing-extensions" do
@@ -271,8 +271,8 @@ class SnowflakeCli < Formula
   end
 
   resource "typing-inspection" do
-    url "https://files.pythonhosted.org/packages/82/5c/e6082df02e215b846b4b8c0b887a64d7d08ffaba30605502639d44c06b82/typing_inspection-0.4.0.tar.gz"
-    sha256 "9765c87de36671694a67904bf2c96e395be9c6439bb6c87b5142569dcdd65122"
+    url "https://files.pythonhosted.org/packages/f8/b1/0c11f5058406b3af7609f121aaa6b609744687f1d158b3c3a5bf4cc94238/typing_inspection-0.4.1.tar.gz"
+    sha256 "6ae134cc0203c33377d43188d4064e9b357dba58cff3185f22924610e70a9d28"
   end
 
   resource "urllib3" do
