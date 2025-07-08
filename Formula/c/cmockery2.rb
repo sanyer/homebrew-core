@@ -27,6 +27,7 @@ class Cmockery2 < Formula
 
   # last commit was 7 years ago, cmockery is also deprecated
   deprecate! date: "2024-07-07", because: :unmaintained
+  disable! date: "2025-07-07", because: :unmaintained
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build

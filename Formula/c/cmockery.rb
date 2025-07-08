@@ -22,6 +22,7 @@ class Cmockery < Formula
 
   # see thread, https://github.com/google/cmockery/issues/72
   deprecate! date: "2024-07-07", because: :unmaintained
+  disable! date: "2025-07-07", because: :unmaintained
 
   on_macos do
     depends_on "autoconf" => :build

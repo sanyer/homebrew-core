@@ -28,6 +28,7 @@ class Dcadec < Formula
 
   # Ref https://github.com/foo86/dcadec/commit/b93deed1a231dd6dd7e39b9fe7d2abe05aa00158
   deprecate! date: "2024-06-30", because: :deprecated_upstream
+  disable! date: "2025-07-02", because: :deprecated_upstream
 
   conflicts_with "libdca", because: "both install `dcadec` binaries"
 

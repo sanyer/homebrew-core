@@ -1,18 +1,18 @@
 class AddonsLinter < Formula
   desc "Firefox Add-ons linter, written in JavaScript"
   homepage "https://github.com/mozilla/addons-linter"
-  url "https://registry.npmjs.org/addons-linter/-/addons-linter-7.13.0.tgz"
-  sha256 "465faac15bc050894113b57dbcabf8abcc63240366f309c94f4bfab07eb1b414"
+  url "https://registry.npmjs.org/addons-linter/-/addons-linter-7.17.0.tgz"
+  sha256 "f2f528beab8d2f3a1e61d6b4bd7b639b993e91844708cc946842c61b74039924"
   license "MPL-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d5f08c19e0418c13d38ef542ed8b07c649c1c08aac568559ca84d8f719870f3e"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d5f08c19e0418c13d38ef542ed8b07c649c1c08aac568559ca84d8f719870f3e"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "d5f08c19e0418c13d38ef542ed8b07c649c1c08aac568559ca84d8f719870f3e"
-    sha256 cellar: :any_skip_relocation, sonoma:        "cd61842b2e81d2c6cfd32149f61b6c6c77f74b37f1de6ec57105c59e7d7ec31b"
-    sha256 cellar: :any_skip_relocation, ventura:       "cd61842b2e81d2c6cfd32149f61b6c6c77f74b37f1de6ec57105c59e7d7ec31b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "d5f08c19e0418c13d38ef542ed8b07c649c1c08aac568559ca84d8f719870f3e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d5f08c19e0418c13d38ef542ed8b07c649c1c08aac568559ca84d8f719870f3e"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "9da46ec379c57c1fd7c94001555e6c74d9c414ddf36a036cfc837bfb22569e86"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "9da46ec379c57c1fd7c94001555e6c74d9c414ddf36a036cfc837bfb22569e86"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "9da46ec379c57c1fd7c94001555e6c74d9c414ddf36a036cfc837bfb22569e86"
+    sha256 cellar: :any_skip_relocation, sonoma:        "cd43e16e29dcf895544db836b46a466780a9a8476ffbf3642fcd066be5eb7f87"
+    sha256 cellar: :any_skip_relocation, ventura:       "cd43e16e29dcf895544db836b46a466780a9a8476ffbf3642fcd066be5eb7f87"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "9da46ec379c57c1fd7c94001555e6c74d9c414ddf36a036cfc837bfb22569e86"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9da46ec379c57c1fd7c94001555e6c74d9c414ddf36a036cfc837bfb22569e86"
   end
 
   depends_on "node"

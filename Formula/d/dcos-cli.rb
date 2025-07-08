@@ -25,6 +25,7 @@ class DcosCli < Formula
 
   # D2iQ (formerly Mesosphere) has shutdown last year
   deprecate! date: "2024-07-07", because: :unmaintained
+  disable! date: "2025-07-07", because: :unmaintained
 
   depends_on "go" => :build
 
